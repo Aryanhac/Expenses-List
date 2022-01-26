@@ -1,10 +1,11 @@
 import React from 'react';
-import ExpensesItem from './components/ExpensesItem';
+import Expenses from './components/Expenses';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <ExpensesItem/>
+      <Expenses/>
     </div>
   );
 }

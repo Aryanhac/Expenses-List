@@ -1,18 +1,31 @@
 import React from 'react';
+import ExpensesDate from './ExpensesDate';
 import './ExpensesItem.css';
-const ExpensesItem = () => {
+const ExpensesItem = ({ Expensesdata }) => {
+  const clickHandler=(str)=>{
+    console.log(str);
+  }
   return (<>
-      <div className="expenses_item">
-          <div className="expenses_item__date">
-                 14 May 2020
-          </div>
-          <div className="expenses_item__description">
-                 car
-          </div>
-          <div className="expenses_item__amount">
-                Rs. 10000
-          </div>
-      </div>
+    
+      {
+        Expensesdata.map((curEle) => {
+          return (
+            <>
+            <div className="expenses_item">
+              <ExpensesDate Date={curEle.date}/>
+              <div className="expenses_item__description">
+                {curEle.title}
+              </div>
+              <div className="expenses_item__amount" onClick={clickHandler("hello")}>
+                {curEle.amount}
+              </div>
+              </div>
+            </>
+          )
+        })
+      }
+
+  
   </>);
 };
 

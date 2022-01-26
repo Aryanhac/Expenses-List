@@ -1,0 +1,15 @@
+.expenses_item__date{
+    flex-basis: 80px;
+    border: 2px solid white;
+    background-color: rgb(75, 69, 69);
+    border-radius: 10px;
+    height: 80px;
+    font-size: 1.2rem;
+    color: white;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding:.5rem;
+}
