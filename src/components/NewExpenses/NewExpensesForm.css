@@ -1,0 +1,49 @@
+.NewExpenses_form{
+    display:flex;
+    background-color: rgb(130, 119, 134);
+    border: 2px solid rgb(7, 71, 7);
+    border-radius: 25px;
+    max-width:52.5rem;
+    min-height:8rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.NewExpenses_form .NewExpenses_form__common{
+    display: flex;
+    flex-direction: column;
+    margin:2rem;
+
+}
+
+.NewExpenses_form .NewExpenses_form__common input{
+    flex-basis: 2.5rem;
+    width:20rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.NewExpenses_form .NewExpenses_form__common label{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+input[type="date"]{
+    margin-top: 0px;
+}
+
+.NewExpenses_form .NewExpenses_form__common button{
+    flex-basis: 2.5rem;
+    width:12rem;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: gray;
+    margin-top: 1.5rem;
+    margin-left: 5rem;
+}

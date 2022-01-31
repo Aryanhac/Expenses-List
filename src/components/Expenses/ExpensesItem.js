@@ -2,8 +2,8 @@ import React from 'react';
 import ExpensesDate from './ExpensesDate';
 import './ExpensesItem.css';
 const ExpensesItem = ({ Expensesdata }) => {
-  const clickHandler=(str)=>{
-    console.log(str);
+  const clickHandler=()=>{
+    console.log("Hello");
   }
   return (<>
     
@@ -16,7 +16,7 @@ const ExpensesItem = ({ Expensesdata }) => {
               <div className="expenses_item__description">
                 {curEle.title}
               </div>
-              <div className="expenses_item__amount" onClick={clickHandler("hello")}>
+              <div className="expenses_item__amount" onClick={clickHandler}>
                 {curEle.amount}
               </div>
               </div>

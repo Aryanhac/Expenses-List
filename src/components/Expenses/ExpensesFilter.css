@@ -1,0 +1,27 @@
+.ExpensesFilter{
+    display:flex;
+    width:50rem;
+    height:60px;
+    align-items:center;
+    margin:1rem;
+    justify-content: space-between;
+    padding: 1.5rem;
+    
+}
+
+.ExpensesFilter_heading{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.ExpensesFilter_options{
+    width: 7rem;
+    height: 35px;
+}
+
+@media(max-width:840px){
+    .ExpensesFilter{
+        width:95vw;
+    }
+}
