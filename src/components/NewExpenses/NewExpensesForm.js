@@ -2,43 +2,43 @@ import React,{useState} from 'react';
 
 const NewExpensesForm = (prop) => {
     
-    const [newData,setNewData]=useState({newTitle:'',newAmount:'',newDate:''});
+    const [newData,setNewData]=useState({title:'',amount:'',date:''});
 
     const getTitle=(event)=>{
        setNewData((preState)=>{
-           return  {...preState,newTitle:event.target.value}
+           return  {...preState,title:event.target.value}
        })
     }
 
     const getAmount=(event)=>{
         setNewData((preState)=>{
-            return  {...preState,newAmount:event.target.value}
+            return  {...preState,amount:event.target.value}
         })
     }
 
     const getDate=(event)=>{
         setNewData((preState)=>{
-            return  {...preState,newDate:event.target.value}
+            return  {...preState,date:event.target.value}
         })
     }
     const formHandler=(event)=>{
         event.preventDefault();
         prop.parent(newData);
-        setNewData({newTitle:'',newAmount:'',newDate:''});
+        setNewData({title:'',amount:'',date:''});
     }
   return <div>
   <form className='NewExpenses_form' onSubmit={formHandler}>
   <div className='NewExpenses_form__title NewExpenses_form__common'>
       <label>Title:</label>
-      <input type="text" placeholder='Enter Title' value={newData.newTitle} onChange={getTitle} required/>
+      <input type="text" placeholder='Enter Title' value={newData.title} onChange={getTitle} required/>
   </div>
   <div className='NewExpenses_form__amount NewExpenses_form__common'>
        <label>Amount:</label>
-      <input type='number' placeholder='Enter Amount' min='1' value={newData.newAmount} onChange={getAmount} required/>
+      <input type='number' placeholder='Enter Amount' min='1' value={newData.amount} onChange={getAmount} required/>
   </div>
   <div className='NewExpenses_form_date NewExpenses_form__common'>
        <label>Date:</label>
-      <input type="date" placeholder='Enter date' value={newData.newDate} onChange={getDate} required/>
+      <input type="date" placeholder='Enter date' value={newData.date} onChange={getDate} required/>
   </div>
   <div className='NewExpenses_form_button NewExpenses_form__common'>
        <button type='submit'>AddExpense</button>

@@ -2,9 +2,7 @@ import React from 'react';
 import ExpensesDate from './ExpensesDate';
 import './ExpensesItem.css';
 const ExpensesItem = ({ Expensesdata }) => {
-  const clickHandler=()=>{
-    console.log("Hello");
-  }
+  
   return (<>
     
       {
@@ -12,11 +10,11 @@ const ExpensesItem = ({ Expensesdata }) => {
           return (
             <>
             <div className="expenses_item">
-              <ExpensesDate Date={curEle.date}/>
+              {/* <ExpensesDate Date={curEle.date}/> */}
               <div className="expenses_item__description">
                 {curEle.title}
               </div>
-              <div className="expenses_item__amount" onClick={clickHandler}>
+              <div className="expenses_item__amount">
                 {curEle.amount}
               </div>
               </div>

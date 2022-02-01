@@ -2,9 +2,9 @@ import React from 'react';
 import NewExpensesForm from './NewExpensesForm';
 import './NewExpenses.css';
 
-const NewExpenses = () => {
+const NewExpenses = ({func}) => {
   const getForm=(data)=>{
-      console.log(data);
+      func(data);
   }
   return (<div>
       <NewExpensesForm  parent={getForm} />
