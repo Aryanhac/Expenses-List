@@ -23,7 +23,10 @@ const NewExpensesForm = (prop) => {
     }
     const formHandler=(event)=>{
         event.preventDefault();
-        prop.parent(newData);
+        const obj={
+            ...newData,date:new Date(newData.date),id:Math.random()
+        }
+        prop.parent(obj);
         setNewData({title:'',amount:'',date:''});
     }
   return <div>

@@ -8,17 +8,17 @@ const ExpensesItem = ({ Expensesdata }) => {
       {
         Expensesdata.map((curEle) => {
           return (
-            <>
-            <div className="expenses_item">
-              {/* <ExpensesDate Date={curEle.date}/> */}
+            
+            <div className="expenses_item" key={curEle.id} >
+              <ExpensesDate Date={curEle.date}/>
               <div className="expenses_item__description">
                 {curEle.title}
               </div>
               <div className="expenses_item__amount">
-                {curEle.amount}
+                Rs.{curEle.amount}
               </div>
               </div>
-            </>
+          
           )
         })
       }

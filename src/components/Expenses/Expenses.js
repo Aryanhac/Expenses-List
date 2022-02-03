@@ -3,15 +3,16 @@ import ExpensesItem from './ExpensesItem';
 import './Expenses.css';
 import ExpensesFilter from './ExpensesFilter';
 
-const getYear =(year)=>{
-  console.log(year);
-}
 
-const Expenses = ({props}) => {
-    
+
+const Expenses = ({props,yearData}) => {
+
+  const getYear =(year)=>{
+     yearData(year);
+  }
   return (<>
        <div className="Expenses">
-       <ExpensesFilter  Year={getYear}/>
+      <ExpensesFilter  Year={getYear}/>
       <ExpensesItem Expensesdata={props} />
       </div>
   </>);
